@@ -57,8 +57,8 @@ pub fn derive_static_str(input: TokenStream) -> TokenStream {
     let input = parse_macro_input!(input as DeriveInput);
     let name = &input.ident;
 
-    let prefix = get_attr_value(&input.attrs, "prefix").unwrap_or_else(|| "".to_string());
-    let suffix = get_attr_value(&input.attrs, "suffix").unwrap_or_else(|| "".to_string());
+    let prefix = get_attr_value(&input.attrs, "prefix").unwrap_or_default();
+    let suffix = get_attr_value(&input.attrs, "suffix").unwrap_or_default();
 
     let serialize_all = get_strum_serialize_all(&input.attrs);
     let path_str_impl = impl_path_str(name, &input.data, &prefix, &suffix, serialize_all);
