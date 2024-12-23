@@ -1,0 +1,24 @@
+[package]
+name = "derive_static_str"
+version = "0.1.0"
+edition = "2021"
+description = "A procedural macro to derive static str implementations"
+authors = ["Nate Butler <iamnbutler@gmail.com>"]
+license = "MIT"
+repository = "https://github.com/iamnbutler/derive_static_str"
+keywords = ["derive", "static_str", "proc-macro"]
+categories = ["development-tools::procedural-macro-helpers"]
+
+[lib]
+proc-macro = true
+
+[dependencies]
+syn = { version = "1.0", features = ["full"] }
+quote = "1.0"
+proc-macro2 = "1.0"
+convert_case = "0.6"
+
+strum = { version = "0.24", features = ["derive"] }
+
+[dev-dependencies]
+strum_macros = "0.26.4"
