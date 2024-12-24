@@ -1,6 +1,6 @@
 # derive_static_str
 
-A proc macro for composing static strings from enum variants. Sometimes you just want a `&'static str` with some prefix or suffix...
+A proc macro for composing static string slices from enum variants. Sometimes you just want a `&'static str` with some prefix or suffix...
 
 [Crates.io](https://crates.io/crates/derive_static_str)
 
